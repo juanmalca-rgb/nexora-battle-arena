@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEXORA Battle Arena</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <main id="game">
+
+    <!-- MENÚ PRINCIPAL -->
+    <section id="menu" class="screen">
+
+      <div class="logo">
+        <span>NEXORA</span>
+        <small>BATTLE ARENA</small>
+      </div>
+
+      <p class="subtitle">Entra a la arena. Sobrevive. Domina.</p>
+
+      <div class="menu-buttons">
+        <button id="playBtn">⚔️ JUGAR</button>
+        <button id="onlineBtn">🌐 ONLINE 1 VS 1</button>
+      </div>
+
+      <div class="controls">
+        <p><b>W A S D</b> — Movimiento</p>
+        <p><b>Mouse</b> — Apuntar</p>
+        <p><b>Click</b> — Disparar</p>
+        <p><b>R</b> — Recargar</p>
+        <p><b>E</b> — Habilidad</p>
+      </div>
+
+    </section>
+
+    <!-- HUD -->
+    <section id="hud" class="hidden">
+
+      <div class="hud-item">
+        ❤️
+        <div class="bar">
+          <div id="healthBar"></div>
+        </div>
+        <span id="healthText">100</span>
+      </div>
+
+      <div class="hud-item">
+        🔫 <span id="ammo">12</span>/12
+      </div>
+
+      <div class="hud-item">
+        🎯 <span id="kills">0</span>
+      </div>
+
+      <div class="hud-item">
+        ⚡ <span id="abilityText">LISTA</span>
+      </div>
+
+    </section>
+
+    <!-- PANTALLA ONLINE -->
+    <section id="onlineMenu" class="screen hidden">
+
+      <h1>🌐 MODO ONLINE</h1>
+
+      <p>Modo experimental para 2 jugadores.</p>
+
+      <input
+        id="roomCode"
+        type="text"
+        maxlength="12"
+        placeholder="Código de sala"
+      >
+
+      <button id="createRoom">CREAR SALA</button>
+      <button id="joinRoom">UNIRSE</button>
+      <button id="backBtn">VOLVER</button>
+
+      <p id="onlineStatus"></p>
+
+    </section>
+
+    <!-- GAME OVER -->
+    <section id="gameOver" class="screen hidden">
+
+      <h1>💀 ELIMINADO</h1>
+
+      <p>Eliminaciones:</p>
+
+      <div id="finalKills">0</div>
+
+      <div id="mathBox">
+
+        <h2>🧠 DESAFÍO NEXORA</h2>
+
+        <p id="question"></p>
+
+        <input
+          id="answer"
+          type="number"
+          placeholder="Tu respuesta"
+        >
+
+        <button id="checkAnswer">
+          COMPROBAR
+        </button>
+
+        <p id="answerResult"></p>
+
+      </div>
+
+      <button id="restartBtn">
+        🔄 JUGAR DE NUEVO
+      </button>
+
+      <button id="menuBtn">
+        🏠 MENÚ
+      </button>
+
+    </section>
+
+    <div id="crosshair">+</div>
+
+    <canvas id="canvas"></canvas>
+
+  </main>
+
+  <script src="js/game.js"></script>
+
+</body>
+</html>
